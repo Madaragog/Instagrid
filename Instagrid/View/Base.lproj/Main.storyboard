@@ -298,16 +298,16 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="JLD-N9-9b6"/>
+                                <exclude reference="BU6-2k-LTt"/>
+                                <exclude reference="fu1-3E-sGf"/>
+                                <exclude reference="rGT-CY-7SH"/>
+                                <exclude reference="wny-Il-15W"/>
                                 <exclude reference="RFR-UW-uoK"/>
                                 <exclude reference="nRl-qU-Zrx"/>
                                 <exclude reference="ofH-ap-971"/>
                                 <exclude reference="HlP-8p-sG9"/>
                                 <exclude reference="T3j-1O-qPH"/>
                                 <exclude reference="Y8G-mF-Q4z"/>
-                                <exclude reference="BU6-2k-LTt"/>
-                                <exclude reference="fu1-3E-sGf"/>
-                                <exclude reference="rGT-CY-7SH"/>
-                                <exclude reference="wny-Il-15W"/>
                                 <exclude reference="rsE-46-VIy"/>
                             </mask>
                         </variation>
@@ -315,6 +315,13 @@
                             <mask key="constraints">
                                 <include reference="JLD-N9-9b6"/>
                                 <exclude reference="wLU-1b-3Oa"/>
+                                <exclude reference="1pU-tS-0tg"/>
+                                <exclude reference="2eL-Kc-Zkq"/>
+                                <include reference="BU6-2k-LTt"/>
+                                <exclude reference="QR3-bC-Vef"/>
+                                <include reference="fu1-3E-sGf"/>
+                                <include reference="rGT-CY-7SH"/>
+                                <exclude reference="wny-Il-15W"/>
                                 <exclude reference="RFR-UW-uoK"/>
                                 <exclude reference="VS8-Qr-5Sh"/>
                                 <exclude reference="jGP-cZ-7B0"/>
@@ -324,19 +331,15 @@
                                 <exclude reference="T3j-1O-qPH"/>
                                 <include reference="Y8G-mF-Q4z"/>
                                 <exclude reference="kJ2-3k-w67"/>
-                                <exclude reference="1pU-tS-0tg"/>
-                                <exclude reference="2eL-Kc-Zkq"/>
-                                <include reference="BU6-2k-LTt"/>
-                                <exclude reference="QR3-bC-Vef"/>
-                                <include reference="fu1-3E-sGf"/>
-                                <include reference="rGT-CY-7SH"/>
-                                <exclude reference="wny-Il-15W"/>
                                 <exclude reference="c5f-so-cLv"/>
                                 <include reference="rsE-46-VIy"/>
                                 <exclude reference="zK4-ZR-262"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="YAp-bv-oAt" id="nd0-2s-maq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
