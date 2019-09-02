@@ -15,6 +15,8 @@
 		824676C92318185500707819 /* ThirstySoft.otf in Resources */ = {isa = PBXBuildFile; fileRef = 824676C72318185500707819 /* ThirstySoft.otf */; };
 		824676CA2318185500707819 /* Delm.otf in Resources */ = {isa = PBXBuildFile; fileRef = 824676C82318185500707819 /* Delm.otf */; };
 		824676D02318198500707819 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 824676CF2318198500707819 /* Default-568h@2x.png */; };
+		824676DC231D64F900707819 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824676DB231D64F900707819 /* ButtonsView.swift */; };
+		824676DE231D66DF00707819 /* FrameChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824676DD231D66DF00707819 /* FrameChange.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		824676C72318185500707819 /* ThirstySoft.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoft.otf; sourceTree = "<group>"; };
 		824676C82318185500707819 /* Delm.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Delm.otf; sourceTree = "<group>"; };
 		824676CF2318198500707819 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		824676DB231D64F900707819 /* ButtonsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
+		824676DD231D66DF00707819 /* FrameChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameChange.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 		824676CD2318191000707819 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				824676DD231D66DF00707819 /* FrameChange.swift */,
+				824676DB231D64F900707819 /* ButtonsView.swift */,
 				824676B92318181700707819 /* Main.storyboard */,
 			);
 			path = View;
@@ -179,6 +185,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				824676DC231D64F900707819 /* ButtonsView.swift in Sources */,
+				824676DE231D66DF00707819 /* FrameChange.swift in Sources */,
 				824676B82318181700707819 /* ViewController.swift in Sources */,
 				824676B62318181700707819 /* AppDelegate.swift in Sources */,
 			);
