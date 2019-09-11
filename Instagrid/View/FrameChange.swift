@@ -9,13 +9,15 @@
 import Foundation
 import UIKit
 
-class FrameChange: UIStackView {
+class FrameChange: UIView {
+    
     @IBOutlet weak var leftFrame: UIStackView!
     @IBOutlet weak var middleFrame: UIStackView!
     @IBOutlet weak var rightFrame: UIStackView!
-  
+
 
     override func setNeedsDisplay() {
+        super.setNeedsDisplay()
         let nameLF = Notification.Name(rawValue: "leftFrameChange")
         NotificationCenter.default.addObserver(self, selector: #selector(leftFrameIsSelected), name: nameLF, object: nil)
         

@@ -23,64 +23,74 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nj7-4F-CHS" userLabel="Frame Change">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nj7-4F-CHS" userLabel="Frame Change" customClass="FrameChange" customModule="Instagrid" customModuleProvider="target">
                                 <rect key="frame" x="16" y="140" width="288" height="288"/>
                                 <subviews>
-                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MWA-Ia-i8t" userLabel="leftFrame">
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MWA-Ia-i8t" userLabel="leftFrame" customClass="FrameImgPicker" customModule="Instagrid" customModuleProvider="target">
                                         <rect key="frame" x="8" y="8" width="272" height="272"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="JwP-Nm-YvP" userLabel="Plus1LF">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="JwP-Nm-YvP" userLabel="plus1LF">
                                                 <rect key="frame" x="0.0" y="0.0" width="272" height="132"/>
                                                 <color key="backgroundColor" red="0.94183081390000001" green="0.94254469870000002" blue="0.94194132090000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7Y9-5q-FmQ">
                                                 <rect key="frame" x="0.0" y="140" width="272" height="132"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="eDT-Jp-pw7" userLabel="Plus2LF">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="eDT-Jp-pw7" userLabel="plus2LF">
                                                         <rect key="frame" x="0.0" y="0.0" width="132" height="132"/>
                                                         <color key="backgroundColor" red="0.94183081390000001" green="0.94254469870000002" blue="0.94194132090000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </imageView>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="DUT-ZX-2oK" userLabel="Plus3LF">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="DUT-ZX-2oK" userLabel="plus3LF">
                                                         <rect key="frame" x="140" y="0.0" width="132" height="132"/>
                                                         <color key="backgroundColor" red="0.94183081390000001" green="0.94254469870000002" blue="0.94194132090000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </imageView>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
+                                        <connections>
+                                            <outletCollection property="plus" destination="JwP-Nm-YvP" collectionClass="NSMutableArray" id="hpB-lU-AGV"/>
+                                            <outletCollection property="plus" destination="eDT-Jp-pw7" collectionClass="NSMutableArray" id="pzx-NH-biJ"/>
+                                            <outletCollection property="plus" destination="DUT-ZX-2oK" collectionClass="NSMutableArray" id="hc3-rc-v44"/>
+                                        </connections>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xdh-up-c4d" userLabel="middleFrame">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xdh-up-c4d" userLabel="middleFrame" customClass="FrameImgPicker" customModule="Instagrid" customModuleProvider="target">
                                         <rect key="frame" x="8" y="8" width="272" height="272"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="51M-ET-ZXo">
                                                 <rect key="frame" x="0.0" y="0.0" width="272" height="132"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="wpa-tO-jDN" userLabel="Plus1MF">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="wpa-tO-jDN" userLabel="plus1MF">
                                                         <rect key="frame" x="0.0" y="0.0" width="132" height="132"/>
                                                         <color key="backgroundColor" red="0.94183081390000001" green="0.94254469870000002" blue="0.94194132090000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </imageView>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="hEg-vj-vnB" userLabel="Plus2MF">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="hEg-vj-vnB" userLabel="plus2MF">
                                                         <rect key="frame" x="140" y="0.0" width="132" height="132"/>
                                                         <color key="backgroundColor" red="0.94183081390000001" green="0.94254469870000002" blue="0.94194132090000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </imageView>
                                                 </subviews>
                                             </stackView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="lc2-CW-AcK" userLabel="Plus3MF">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="lc2-CW-AcK" userLabel="plus3MF">
                                                 <rect key="frame" x="0.0" y="140" width="272" height="132"/>
                                                 <color key="backgroundColor" red="0.94183081390000001" green="0.94254469870000002" blue="0.94194132090000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </imageView>
                                         </subviews>
+                                        <connections>
+                                            <outletCollection property="plus" destination="wpa-tO-jDN" collectionClass="NSMutableArray" id="r8L-RO-36D"/>
+                                            <outletCollection property="plus" destination="hEg-vj-vnB" collectionClass="NSMutableArray" id="0Qv-Ou-f0L"/>
+                                            <outletCollection property="plus" destination="lc2-CW-AcK" collectionClass="NSMutableArray" id="300-kb-K9D"/>
+                                        </connections>
                                     </stackView>
-                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CXY-bL-v6Q" userLabel="rightFrame">
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CXY-bL-v6Q" userLabel="rightFrame" customClass="FrameImgPicker" customModule="Instagrid" customModuleProvider="target">
                                         <rect key="frame" x="8" y="8" width="272" height="272"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="w4Z-0l-gt4">
                                                 <rect key="frame" x="0.0" y="0.0" width="272" height="132"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="V6Q-zH-koy" userLabel="Plus1RF">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="V6Q-zH-koy" userLabel="plus1RF">
                                                         <rect key="frame" x="0.0" y="0.0" width="132" height="132"/>
                                                         <color key="backgroundColor" red="0.94183081390000001" green="0.94254469870000002" blue="0.94194132090000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </imageView>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="tLU-ci-XRg" userLabel="Plus2RF">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="tLU-ci-XRg" userLabel="plus2RF">
                                                         <rect key="frame" x="140" y="0.0" width="132" height="132"/>
                                                         <color key="backgroundColor" red="0.94183081390000001" green="0.94254469870000002" blue="0.94194132090000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </imageView>
@@ -89,17 +99,23 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Uzx-Qp-we6">
                                                 <rect key="frame" x="0.0" y="140" width="272" height="132"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="bAh-Ss-kTu" userLabel="Plus3RF">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="bAh-Ss-kTu" userLabel="plus3RF">
                                                         <rect key="frame" x="0.0" y="0.0" width="132" height="132"/>
                                                         <color key="backgroundColor" red="0.94183081390000001" green="0.94254469870000002" blue="0.94194132090000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </imageView>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="Bl2-Uq-qYg" userLabel="Plus4RF">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="Bl2-Uq-qYg" userLabel="plus4RF">
                                                         <rect key="frame" x="140" y="0.0" width="132" height="132"/>
                                                         <color key="backgroundColor" red="0.94183081390000001" green="0.94254469870000002" blue="0.94194132090000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </imageView>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
+                                        <connections>
+                                            <outletCollection property="plus" destination="V6Q-zH-koy" collectionClass="NSMutableArray" id="E6T-zl-O5F"/>
+                                            <outletCollection property="plus" destination="tLU-ci-XRg" collectionClass="NSMutableArray" id="HHS-Z7-ZuF"/>
+                                            <outletCollection property="plus" destination="bAh-Ss-kTu" collectionClass="NSMutableArray" id="wPf-rk-JHW"/>
+                                            <outletCollection property="plus" destination="Bl2-Uq-qYg" collectionClass="NSMutableArray" id="NbX-gD-x5a"/>
+                                        </connections>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.058429442349999999" green="0.40303593869999998" blue="0.59889394039999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -118,6 +134,11 @@
                                     <constraint firstAttribute="trailing" secondItem="xdh-up-c4d" secondAttribute="trailing" constant="8" id="puA-KP-H11"/>
                                     <constraint firstAttribute="bottom" secondItem="xdh-up-c4d" secondAttribute="bottom" constant="8" id="yS6-6S-gee"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="leftFrame" destination="MWA-Ia-i8t" id="FVZ-Ya-jCm"/>
+                                    <outlet property="middleFrame" destination="xdh-up-c4d" id="gBw-dY-c8a"/>
+                                    <outlet property="rightFrame" destination="CXY-bL-v6Q" id="j9n-K0-G7u"/>
+                                </connections>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Instagrid" translatesAutoresizingMaskIntoConstraints="NO" id="3Xk-c6-XKO" userLabel="Instagrid">
                                 <rect key="frame" x="97" y="30" width="126" height="39"/>
@@ -273,7 +294,7 @@
                             <constraint firstItem="Nj7-4F-CHS" firstAttribute="top" secondItem="YAp-bv-oAt" secondAttribute="bottom" constant="8" id="1pU-tS-0tg"/>
                             <constraint firstItem="Nj7-4F-CHS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2eL-Kc-Zkq"/>
                             <constraint firstItem="Nj7-4F-CHS" firstAttribute="leading" secondItem="UgK-so-1yu" secondAttribute="trailing" constant="148" id="BU6-2k-LTt">
-                                <variation key="heightClass=compact" constant="65"/>
+                                <variation key="heightClass=compact" constant="70"/>
                             </constraint>
                             <constraint firstItem="UgK-so-1yu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="72" id="HlP-8p-sG9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Nj7-4F-CHS" secondAttribute="bottom" constant="10" id="JLD-N9-9b6">

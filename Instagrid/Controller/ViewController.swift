@@ -12,18 +12,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     
     
-    
-/*    @IBAction func plus1LFB(_ sender: UIButton) {
-        let image = UIImagePickerController()
-        image.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
-        
-        image.sourceType = UIImagePickerController.SourceType.photoLibrary
-        
-        image.allowsEditing = false
-    }
-*/
-    
-    
     private func labelChange() {
         if UIDevice.current.orientation.isPortrait {
             label.text = "Swipe up to share"
@@ -39,8 +27,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        let imgInterraction = Notification.Name(rawValue: "imgInterract")
+        let imgInterractionNotif = Notification(name: imgInterraction)
+        NotificationCenter.default.post(imgInterractionNotif)
     }
+    
+    
     
     
 }

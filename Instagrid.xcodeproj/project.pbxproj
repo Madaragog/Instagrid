@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82124D782329AA57004F0958 /* FrameImgPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82124D772329AA57004F0958 /* FrameImgPicker.swift */; };
 		824676B62318181700707819 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824676B52318181700707819 /* AppDelegate.swift */; };
 		824676B82318181700707819 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824676B72318181700707819 /* ViewController.swift */; };
 		824676BB2318181700707819 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 824676B92318181700707819 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		82124D772329AA57004F0958 /* FrameImgPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameImgPicker.swift; sourceTree = "<group>"; };
 		824676B22318181700707819 /* Instagrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		824676B52318181700707819 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		824676B72318181700707819 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				824676DD231D66DF00707819 /* FrameChange.swift */,
+				82124D772329AA57004F0958 /* FrameImgPicker.swift */,
 				824676DB231D64F900707819 /* ButtonsView.swift */,
 				824676B92318181700707819 /* Main.storyboard */,
 			);
@@ -186,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				824676DC231D64F900707819 /* ButtonsView.swift in Sources */,
+				82124D782329AA57004F0958 /* FrameImgPicker.swift in Sources */,
 				824676DE231D66DF00707819 /* FrameChange.swift in Sources */,
 				824676B82318181700707819 /* ViewController.swift in Sources */,
 				824676B62318181700707819 /* AppDelegate.swift in Sources */,
