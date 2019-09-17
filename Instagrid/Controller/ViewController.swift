@@ -26,14 +26,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let imgInterraction = Notification.Name(rawValue: "imgInterract")
-        let imgInterractionNotif = Notification(name: imgInterraction)
-        NotificationCenter.default.post(imgInterractionNotif)
+        let imgAddInterraction = Notification.Name(rawValue: "imgAddInterract")
+        let imgAddInterractionNotif = Notification(name: imgAddInterraction)
+        NotificationCenter.default.post(imgAddInterractionNotif)
     }
     
-    
-    
-    
 }
-

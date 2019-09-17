@@ -48,9 +48,9 @@
                                             </stackView>
                                         </subviews>
                                         <connections>
-                                            <outletCollection property="plus" destination="JwP-Nm-YvP" collectionClass="NSMutableArray" id="hpB-lU-AGV"/>
-                                            <outletCollection property="plus" destination="eDT-Jp-pw7" collectionClass="NSMutableArray" id="pzx-NH-biJ"/>
-                                            <outletCollection property="plus" destination="DUT-ZX-2oK" collectionClass="NSMutableArray" id="hc3-rc-v44"/>
+                                            <outletCollection property="plus" destination="JwP-Nm-YvP" collectionClass="NSMutableArray" id="OXh-9G-CVs"/>
+                                            <outletCollection property="plus" destination="eDT-Jp-pw7" collectionClass="NSMutableArray" id="P1h-QK-dfl"/>
+                                            <outletCollection property="plus" destination="DUT-ZX-2oK" collectionClass="NSMutableArray" id="M2f-oI-ZkR"/>
                                         </connections>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xdh-up-c4d" userLabel="middleFrame" customClass="FrameImgPicker" customModule="Instagrid" customModuleProvider="target">
@@ -75,9 +75,9 @@
                                             </imageView>
                                         </subviews>
                                         <connections>
-                                            <outletCollection property="plus" destination="wpa-tO-jDN" collectionClass="NSMutableArray" id="r8L-RO-36D"/>
-                                            <outletCollection property="plus" destination="hEg-vj-vnB" collectionClass="NSMutableArray" id="0Qv-Ou-f0L"/>
-                                            <outletCollection property="plus" destination="lc2-CW-AcK" collectionClass="NSMutableArray" id="300-kb-K9D"/>
+                                            <outletCollection property="plus" destination="wpa-tO-jDN" collectionClass="NSMutableArray" id="Y7d-9M-rfL"/>
+                                            <outletCollection property="plus" destination="hEg-vj-vnB" collectionClass="NSMutableArray" id="1rb-2L-V2S"/>
+                                            <outletCollection property="plus" destination="lc2-CW-AcK" collectionClass="NSMutableArray" id="tzy-7y-ra2"/>
                                         </connections>
                                     </stackView>
                                     <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CXY-bL-v6Q" userLabel="rightFrame" customClass="FrameImgPicker" customModule="Instagrid" customModuleProvider="target">
@@ -111,10 +111,10 @@
                                             </stackView>
                                         </subviews>
                                         <connections>
-                                            <outletCollection property="plus" destination="V6Q-zH-koy" collectionClass="NSMutableArray" id="E6T-zl-O5F"/>
-                                            <outletCollection property="plus" destination="tLU-ci-XRg" collectionClass="NSMutableArray" id="HHS-Z7-ZuF"/>
-                                            <outletCollection property="plus" destination="bAh-Ss-kTu" collectionClass="NSMutableArray" id="wPf-rk-JHW"/>
-                                            <outletCollection property="plus" destination="Bl2-Uq-qYg" collectionClass="NSMutableArray" id="NbX-gD-x5a"/>
+                                            <outletCollection property="plus" destination="V6Q-zH-koy" collectionClass="NSMutableArray" id="5nf-Fg-4Et"/>
+                                            <outletCollection property="plus" destination="tLU-ci-XRg" collectionClass="NSMutableArray" id="TtY-oX-9Xh"/>
+                                            <outletCollection property="plus" destination="bAh-Ss-kTu" collectionClass="NSMutableArray" id="Aaq-Rb-Gao"/>
+                                            <outletCollection property="plus" destination="Bl2-Uq-qYg" collectionClass="NSMutableArray" id="GAM-19-a3C"/>
                                         </connections>
                                     </stackView>
                                 </subviews>

@@ -9,31 +9,47 @@
 
 import UIKit
 
-class FrameImgPicker: UIStackView, UIGestureRecognizerDelegate {
+class FrameImgPicker: UIStackView, UIGestureRecognizerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet var plus: [UIImageView]!
     
+    var selectedImage: UIButton!
+    var picker = UIImagePickerController()
     
     override func setNeedsDisplay() {
         super.setNeedsDisplay()
-        let imgInterraction = Notification.Name(rawValue: "imgInterract")
-        NotificationCenter.default.addObserver(self, selector: #selector(imgAddInteraction), name: imgInterraction, object: nil)
-    }
-    
-    @objc func imgAddInteraction() {
-            for img in plus {
-                let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTaped(tapGestureRecognizer:)))
-                tapGestureRecognizer.delegate = self
-                img.addGestureRecognizer(tapGestureRecognizer)
-                img.isUserInteractionEnabled = true
-            }
+        
+        let imgAddInterraction = Notification.Name(rawValue: "imgAddInterract")
+        NotificationCenter.default.addObserver(self, selector: #selector(imgAddInteractionFunc), name: imgAddInterraction, object: nil)
+        
         
     }
     
-    @objc func imageTaped(tapGestureRecognizer: UITapGestureRecognizer) {
-        print("fdf")
-        
+    @objc func imgAddInteractionFunc() {
+        for img in plus {
+            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTappedFunc(tapGestureRecognizer:)))
+            tapGestureRecognizer.delegate = self
+            img.addGestureRecognizer(tapGestureRecognizer)
+            img.isUserInteractionEnabled = true
+        }
     }
     
+    @objc func imageTappedFunc(tapGestureRecognizer: UIButton) {
+        selectedImage = tapGestureRecognizer
+        picker.allowsEditing = true
+        picker.delegate = self
+        ViewController().present(picker, animated: true)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let photo = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
+        
+        ViewController().dismiss(animated: true, completion: nil)
+        
+        
+        selectedImage.setImage(photo, for: .normal)
+        selectedImage.imageView?.contentMode = .scaleToFill
+        
+    }
     
 }
