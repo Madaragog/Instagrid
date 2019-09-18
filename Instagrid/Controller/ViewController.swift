@@ -8,8 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,  UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var label: UILabel!
+    
+    @IBOutlet var plus: [ImageButtonManager]!
+    
+    
+    var selectedImage: ImageButtonManager!
+    var picker = UIImagePickerController()
     
     
     private func labelChange() {
@@ -26,9 +32,28 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let imgAddInterraction = Notification.Name(rawValue: "imgAddInterract")
-        let imgAddInterractionNotif = Notification(name: imgAddInterraction)
-        NotificationCenter.default.post(imgAddInterractionNotif)
     }
+    
+    
+    @IBAction func didTapButton(_ sender: ImageButtonManager) {
+        selectedImage = sender
+        picker.allowsEditing = false
+        picker.delegate = self
+        present(picker, animated: true)
+    }
+
+    
+
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let photo = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        
+        dismiss(animated: true, completion: nil)
+        
+        selectedImage.setImage(photo, for: .normal)
+        selectedImage.imageView!.contentMode = .scaleToFill
+        
+    }
+    
     
 }

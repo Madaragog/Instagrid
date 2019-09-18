@@ -26,96 +26,100 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nj7-4F-CHS" userLabel="Frame Change" customClass="FrameChange" customModule="Instagrid" customModuleProvider="target">
                                 <rect key="frame" x="16" y="140" width="288" height="288"/>
                                 <subviews>
-                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MWA-Ia-i8t" userLabel="leftFrame" customClass="FrameImgPicker" customModule="Instagrid" customModuleProvider="target">
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MWA-Ia-i8t" userLabel="leftFrame">
                                         <rect key="frame" x="8" y="8" width="272" height="272"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="JwP-Nm-YvP" userLabel="plus1LF">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xG6-8I-25H" userLabel="Button1LF" customClass="ImageButtonManager" customModule="Instagrid" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="272" height="132"/>
-                                                <color key="backgroundColor" red="0.94183081390000001" green="0.94254469870000002" blue="0.94194132090000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </imageView>
+                                                <connections>
+                                                    <action selector="didTapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W4m-xA-fcf"/>
+                                                </connections>
+                                            </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7Y9-5q-FmQ">
                                                 <rect key="frame" x="0.0" y="140" width="272" height="132"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="eDT-Jp-pw7" userLabel="plus2LF">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1G-Yy-KUq" userLabel="Button2LF" customClass="ImageButtonManager" customModule="Instagrid" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="132" height="132"/>
-                                                        <color key="backgroundColor" red="0.94183081390000001" green="0.94254469870000002" blue="0.94194132090000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </imageView>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="DUT-ZX-2oK" userLabel="plus3LF">
+                                                        <connections>
+                                                            <action selector="didTapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HsA-Pu-rjx"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igx-Cv-d2M" userLabel="Button3LF" customClass="ImageButtonManager" customModule="Instagrid" customModuleProvider="target">
                                                         <rect key="frame" x="140" y="0.0" width="132" height="132"/>
-                                                        <color key="backgroundColor" red="0.94183081390000001" green="0.94254469870000002" blue="0.94194132090000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </imageView>
+                                                        <connections>
+                                                            <action selector="didTapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bxi-BS-AVZ"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                        <connections>
-                                            <outletCollection property="plus" destination="JwP-Nm-YvP" collectionClass="NSMutableArray" id="OXh-9G-CVs"/>
-                                            <outletCollection property="plus" destination="eDT-Jp-pw7" collectionClass="NSMutableArray" id="P1h-QK-dfl"/>
-                                            <outletCollection property="plus" destination="DUT-ZX-2oK" collectionClass="NSMutableArray" id="M2f-oI-ZkR"/>
-                                        </connections>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xdh-up-c4d" userLabel="middleFrame" customClass="FrameImgPicker" customModule="Instagrid" customModuleProvider="target">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xdh-up-c4d" userLabel="middleFrame">
                                         <rect key="frame" x="8" y="8" width="272" height="272"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="51M-ET-ZXo">
                                                 <rect key="frame" x="0.0" y="0.0" width="272" height="132"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="wpa-tO-jDN" userLabel="plus1MF">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVH-SQ-oh4" userLabel="Button1MF" customClass="ImageButtonManager" customModule="Instagrid" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="132" height="132"/>
-                                                        <color key="backgroundColor" red="0.94183081390000001" green="0.94254469870000002" blue="0.94194132090000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </imageView>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="hEg-vj-vnB" userLabel="plus2MF">
+                                                        <connections>
+                                                            <action selector="didTapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yte-CG-RBt"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sM-A8-Rpe" userLabel="Button2MF" customClass="ImageButtonManager" customModule="Instagrid" customModuleProvider="target">
                                                         <rect key="frame" x="140" y="0.0" width="132" height="132"/>
-                                                        <color key="backgroundColor" red="0.94183081390000001" green="0.94254469870000002" blue="0.94194132090000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </imageView>
+                                                        <connections>
+                                                            <action selector="didTapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0BX-Jc-nVi"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                             </stackView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="lc2-CW-AcK" userLabel="plus3MF">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mob-kH-JaH" userLabel="Button3MF" customClass="ImageButtonManager" customModule="Instagrid" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="140" width="272" height="132"/>
-                                                <color key="backgroundColor" red="0.94183081390000001" green="0.94254469870000002" blue="0.94194132090000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </imageView>
+                                                <connections>
+                                                    <action selector="didTapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vei-yU-QrR"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
-                                        <connections>
-                                            <outletCollection property="plus" destination="wpa-tO-jDN" collectionClass="NSMutableArray" id="Y7d-9M-rfL"/>
-                                            <outletCollection property="plus" destination="hEg-vj-vnB" collectionClass="NSMutableArray" id="1rb-2L-V2S"/>
-                                            <outletCollection property="plus" destination="lc2-CW-AcK" collectionClass="NSMutableArray" id="tzy-7y-ra2"/>
-                                        </connections>
                                     </stackView>
-                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CXY-bL-v6Q" userLabel="rightFrame" customClass="FrameImgPicker" customModule="Instagrid" customModuleProvider="target">
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CXY-bL-v6Q" userLabel="rightFrame">
                                         <rect key="frame" x="8" y="8" width="272" height="272"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="w4Z-0l-gt4">
                                                 <rect key="frame" x="0.0" y="0.0" width="272" height="132"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="V6Q-zH-koy" userLabel="plus1RF">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJu-4F-eG2" userLabel="Button1RF" customClass="ImageButtonManager" customModule="Instagrid" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="132" height="132"/>
-                                                        <color key="backgroundColor" red="0.94183081390000001" green="0.94254469870000002" blue="0.94194132090000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </imageView>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="tLU-ci-XRg" userLabel="plus2RF">
+                                                        <connections>
+                                                            <action selector="didTapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="04k-fQ-QNC"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9Q-47-yDG" userLabel="Button2RF" customClass="ImageButtonManager" customModule="Instagrid" customModuleProvider="target">
                                                         <rect key="frame" x="140" y="0.0" width="132" height="132"/>
-                                                        <color key="backgroundColor" red="0.94183081390000001" green="0.94254469870000002" blue="0.94194132090000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </imageView>
+                                                        <connections>
+                                                            <action selector="didTapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Srx-mM-11l"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Uzx-Qp-we6">
                                                 <rect key="frame" x="0.0" y="140" width="272" height="132"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="bAh-Ss-kTu" userLabel="plus3RF">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="myb-aL-ZjJ" userLabel="Button3RF" customClass="ImageButtonManager" customModule="Instagrid" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="132" height="132"/>
-                                                        <color key="backgroundColor" red="0.94183081390000001" green="0.94254469870000002" blue="0.94194132090000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </imageView>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="Bl2-Uq-qYg" userLabel="plus4RF">
+                                                        <connections>
+                                                            <action selector="didTapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p9Q-bg-YjT"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5RR-pv-6hD" userLabel="Button4RF" customClass="ImageButtonManager" customModule="Instagrid" customModuleProvider="target">
                                                         <rect key="frame" x="140" y="0.0" width="132" height="132"/>
-                                                        <color key="backgroundColor" red="0.94183081390000001" green="0.94254469870000002" blue="0.94194132090000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </imageView>
+                                                        <connections>
+                                                            <action selector="didTapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fys-51-7rL"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                        <connections>
-                                            <outletCollection property="plus" destination="V6Q-zH-koy" collectionClass="NSMutableArray" id="5nf-Fg-4Et"/>
-                                            <outletCollection property="plus" destination="tLU-ci-XRg" collectionClass="NSMutableArray" id="TtY-oX-9Xh"/>
-                                            <outletCollection property="plus" destination="bAh-Ss-kTu" collectionClass="NSMutableArray" id="Aaq-Rb-Gao"/>
-                                            <outletCollection property="plus" destination="Bl2-Uq-qYg" collectionClass="NSMutableArray" id="GAM-19-a3C"/>
-                                        </connections>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.058429442349999999" green="0.40303593869999998" blue="0.59889394039999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -374,6 +378,16 @@
                     </view>
                     <connections>
                         <outlet property="label" destination="YAp-bv-oAt" id="nd0-2s-maq"/>
+                        <outletCollection property="plus" destination="xG6-8I-25H" collectionClass="NSMutableArray" id="CBu-O7-iQZ"/>
+                        <outletCollection property="plus" destination="M1G-Yy-KUq" collectionClass="NSMutableArray" id="80m-Ib-m6b"/>
+                        <outletCollection property="plus" destination="igx-Cv-d2M" collectionClass="NSMutableArray" id="D2K-5Q-MX0"/>
+                        <outletCollection property="plus" destination="tVH-SQ-oh4" collectionClass="NSMutableArray" id="roJ-Kg-SPH"/>
+                        <outletCollection property="plus" destination="5sM-A8-Rpe" collectionClass="NSMutableArray" id="Gi0-BO-O9T"/>
+                        <outletCollection property="plus" destination="Mob-kH-JaH" collectionClass="NSMutableArray" id="j14-4I-rmE"/>
+                        <outletCollection property="plus" destination="yJu-4F-eG2" collectionClass="NSMutableArray" id="WbY-TY-wj8"/>
+                        <outletCollection property="plus" destination="N9Q-47-yDG" collectionClass="NSMutableArray" id="cHP-KP-9YU"/>
+                        <outletCollection property="plus" destination="myb-aL-ZjJ" collectionClass="NSMutableArray" id="d3e-ik-NZc"/>
+                        <outletCollection property="plus" destination="5RR-pv-6hD" collectionClass="NSMutableArray" id="eO6-dF-Df5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -388,7 +402,6 @@
         <image name="Layout 1" width="27" height="27"/>
         <image name="Layout 2" width="27" height="27"/>
         <image name="Layout 3" width="27" height="27"/>
-        <image name="Plus" width="13.5" height="13.5"/>
         <image name="Selected" width="27" height="27"/>
     </resources>
 </document>

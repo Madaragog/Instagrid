@@ -18,6 +18,7 @@
 		824676D02318198500707819 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 824676CF2318198500707819 /* Default-568h@2x.png */; };
 		824676DC231D64F900707819 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824676DB231D64F900707819 /* ButtonsView.swift */; };
 		824676DE231D66DF00707819 /* FrameChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824676DD231D66DF00707819 /* FrameChange.swift */; };
+		829BC20A2330B6BB00595E9B /* ImageButtonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829BC2092330B6BB00595E9B /* ImageButtonManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		824676CF2318198500707819 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		824676DB231D64F900707819 /* ButtonsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 		824676DD231D66DF00707819 /* FrameChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameChange.swift; sourceTree = "<group>"; };
+		829BC2092330B6BB00595E9B /* ImageButtonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageButtonManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			children = (
 				824676DD231D66DF00707819 /* FrameChange.swift */,
 				82124D772329AA57004F0958 /* FrameImgPicker.swift */,
+				829BC2092330B6BB00595E9B /* ImageButtonManager.swift */,
 				824676DB231D64F900707819 /* ButtonsView.swift */,
 				824676B92318181700707819 /* Main.storyboard */,
 			);
@@ -189,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				824676DC231D64F900707819 /* ButtonsView.swift in Sources */,
+				829BC20A2330B6BB00595E9B /* ImageButtonManager.swift in Sources */,
 				82124D782329AA57004F0958 /* FrameImgPicker.swift in Sources */,
 				824676DE231D66DF00707819 /* FrameChange.swift in Sources */,
 				824676B82318181700707819 /* ViewController.swift in Sources */,
