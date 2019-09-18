@@ -43,15 +43,15 @@ class ViewController: UIViewController,  UIImagePickerControllerDelegate, UINavi
     }
 
     
-
-    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let photo = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         
         dismiss(animated: true, completion: nil)
         
-        selectedImage.setImage(photo, for: .normal)
-        selectedImage.imageView!.contentMode = .scaleToFill
+        selectedImage.setImage(UIImage(named: ""), for: .normal)
+        selectedImage.setBackgroundImage(photo, for: .normal)
+        selectedImage.imageView!.contentMode = .scaleAspectFit
+        
         
     }
     
