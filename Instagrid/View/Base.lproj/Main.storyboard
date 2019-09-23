@@ -377,6 +377,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="frameIMG" destination="Nj7-4F-CHS" id="deb-uL-lCe"/>
                         <outlet property="label" destination="YAp-bv-oAt" id="nd0-2s-maq"/>
                         <outletCollection property="plus" destination="xG6-8I-25H" collectionClass="NSMutableArray" id="CBu-O7-iQZ"/>
                         <outletCollection property="plus" destination="M1G-Yy-KUq" collectionClass="NSMutableArray" id="80m-Ib-m6b"/>

@@ -26,7 +26,6 @@ class ButtonsView: UIStackView {
         NotificationCenter.default.post(notificationLF)
     }
     
-    
     @IBAction func didTapMiddleButton() {
         selectedLB.isHidden = true
         selectedMB.isHidden = false
@@ -46,8 +45,4 @@ class ButtonsView: UIStackView {
         let notificationRF = Notification(name: nameRF)
         NotificationCenter.default.post(notificationRF)
     }
-    
-    
-    
-    
 }

@@ -26,8 +26,10 @@ class FrameChange: UIView {
         
         let nameRF = Notification.Name(rawValue: "rightFrameChange")
         NotificationCenter.default.addObserver(self, selector: #selector(rightFrameIsSelected), name: nameRF, object: nil)
+        
+        swipeToShare()
     }
-
+    
     
     @objc func leftFrameIsSelected() {
         leftFrame.isHidden = false
@@ -47,5 +49,49 @@ class FrameChange: UIView {
         rightFrame.isHidden = false
     }
     
+    
+    func swipeToShare() {
+        let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(OrientationToShare(_:)))
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(OrientationToShare(_:)))
+        
+        swipeUp.direction = .up
+        swipeLeft.direction = .left
+        
+        self.addGestureRecognizer(swipeUp)
+        self.addGestureRecognizer(swipeLeft)
+    }
+    
+    @objc func OrientationToShare(_ sender: UISwipeGestureRecognizer) {
+        if UIDevice.current.orientation.isLandscape {
+            sender.direction = .left
+            swipeAnimation(translationX: -self.frame.width, y: 0)
+        } else {
+            sender.direction = .up
+            swipeAnimation(translationX: 0, y: -self.frame.height)
+        }
+        let frameShare = Notification.Name(rawValue: "frameShar")
+        let frameShareNotif = Notification(name: frameShare)
+        NotificationCenter.default.post(frameShareNotif)
+    }
+    
+    func swipeAnimation(translationX x: CGFloat, y: CGFloat) {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.transform = CGAffineTransform(translationX: x, y: y)
+        })
+    }
+    
+    func createImage(frame: FrameChange) -> UIImage? {
+        UIGraphicsBeginImageContext(self.frame.size)
+        self.layer.render(in: UIGraphicsGetCurrentContext()!)
+        guard let image = UIGraphicsGetImageFromCurrentImageContext() else { return UIImage() }
+        return image
+    }
+    
+    
+    func backInitialPlace() {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.transform = .identity
+        }, completion: nil)
+    }
     
 }

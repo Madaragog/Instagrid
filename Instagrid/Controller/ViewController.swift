@@ -13,6 +13,8 @@ class ViewController: UIViewController,  UIImagePickerControllerDelegate, UINavi
     
     @IBOutlet var plus: [ImageButtonManager]!
     
+    @IBOutlet weak var frameIMG: FrameChange!
+    
     
     var selectedImage: ImageButtonManager!
     var picker = UIImagePickerController()
@@ -32,6 +34,8 @@ class ViewController: UIViewController,  UIImagePickerControllerDelegate, UINavi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let frameShare = Notification.Name(rawValue: "frameShar")
+        NotificationCenter.default.addObserver(self, selector: #selector(frameShareFunc), name: frameShare, object: nil)
     }
     
     
@@ -51,9 +55,17 @@ class ViewController: UIViewController,  UIImagePickerControllerDelegate, UINavi
         selectedImage.setImage(UIImage(named: ""), for: .normal)
         selectedImage.setBackgroundImage(photo, for: .normal)
         selectedImage.imageView!.contentMode = .scaleAspectFit
-        
-        
     }
     
+    @objc func frameShareFunc() {
+        let image = frameIMG.createImage(frame: frameIMG)
+        let activityViewController = UIActivityViewController(activityItems: [image as Any], applicationActivities: nil)
+        present(activityViewController, animated: true, completion: nil)
+        activityViewController.completionWithItemsHandler = {
+            activity, completed, item, error in self.frameIMG.backInitialPlace()
+        }
+    }
+    
+   
     
 }
