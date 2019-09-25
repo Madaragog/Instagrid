@@ -15,7 +15,7 @@ class FrameChange: UIView {
     @IBOutlet weak var middleFrame: UIStackView!
     @IBOutlet weak var rightFrame: UIStackView!
 
-
+//    initializes the view to take account of a notification sent and when a swipe to share is performed by the user
     override func setNeedsDisplay() {
         super.setNeedsDisplay()
         let nameLF = Notification.Name(rawValue: "leftFrameChange")
@@ -30,27 +30,27 @@ class FrameChange: UIView {
         swipeToShare()
     }
     
-    
-    @objc func leftFrameIsSelected() {
+//    displays the frame associated to the buttons and hides the others
+    @objc private func leftFrameIsSelected() {
         leftFrame.isHidden = false
         middleFrame.isHidden = true
         rightFrame.isHidden = true
     }
     
-    @objc func middleFrameIsSelected() {
+    @objc private func middleFrameIsSelected() {
         leftFrame.isHidden = true
         middleFrame.isHidden = false
         rightFrame.isHidden = true
     }
     
-    @objc func rightFrameIsSelected() {
+    @objc private func rightFrameIsSelected() {
         leftFrame.isHidden = true
         middleFrame.isHidden = true
         rightFrame.isHidden = false
     }
     
-    
-    func swipeToShare() {
+//    creates the gestures
+    private func swipeToShare() {
         let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(OrientationToShare(_:)))
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(OrientationToShare(_:)))
         
@@ -60,8 +60,8 @@ class FrameChange: UIView {
         self.addGestureRecognizer(swipeUp)
         self.addGestureRecognizer(swipeLeft)
     }
-    
-    @objc func OrientationToShare(_ sender: UISwipeGestureRecognizer) {
+//    detects the orientation and performs either a swipe left animation or a swipe up animation
+    @objc private func OrientationToShare(_ sender: UISwipeGestureRecognizer) {
         if UIDevice.current.orientation.isLandscape {
             sender.direction = .left
             swipeAnimation(translationX: -self.frame.width, y: 0)
@@ -73,22 +73,22 @@ class FrameChange: UIView {
         let frameShareNotif = Notification(name: frameShare)
         NotificationCenter.default.post(frameShareNotif)
     }
-    
-    func swipeAnimation(translationX x: CGFloat, y: CGFloat) {
+//    used to create the swipe animations above
+    private func swipeAnimation(translationX x: CGFloat, y: CGFloat) {
         UIView.animate(withDuration: 0.5, animations: {
             self.transform = CGAffineTransform(translationX: x, y: y)
         })
     }
-    
-    func createImage(frame: FrameChange) -> UIImage? {
+//    create an image of the frame swipped
+    public func createImage(frame: FrameChange) -> UIImage? {
         UIGraphicsBeginImageContext(self.frame.size)
         self.layer.render(in: UIGraphicsGetCurrentContext()!)
         guard let image = UIGraphicsGetImageFromCurrentImageContext() else { return UIImage() }
         return image
     }
     
-    
-    func backInitialPlace() {
+//    puts the swipped frame back to it's original place with an animation
+    public func backInitialPlace() {
         UIView.animate(withDuration: 0.5, animations: {
             self.transform = .identity
         }, completion: nil)

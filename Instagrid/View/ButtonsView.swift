@@ -15,8 +15,8 @@ class ButtonsView: UIStackView {
     @IBOutlet weak var selectedMB: UIImageView!
     @IBOutlet weak var selectedRB: UIImageView!
     
-    
-    @IBAction func didTapLeftButton(_ sender: UIButton) {
+//    Shows the selected mark in the tapped button, hides it for the others and send a notification to change the frame with the one assigned with the button
+    @IBAction private func didTapLeftButton(_ sender: UIButton) {
         selectedLB.isHidden = false
         selectedMB.isHidden = true
         selectedRB.isHidden = true
@@ -26,7 +26,7 @@ class ButtonsView: UIStackView {
         NotificationCenter.default.post(notificationLF)
     }
     
-    @IBAction func didTapMiddleButton() {
+    @IBAction private func didTapMiddleButton() {
         selectedLB.isHidden = true
         selectedMB.isHidden = false
         selectedRB.isHidden = true
@@ -36,7 +36,7 @@ class ButtonsView: UIStackView {
         NotificationCenter.default.post(notificationMF)
     }
     
-    @IBAction func didTapRightButton() {
+    @IBAction private func didTapRightButton() {
         selectedLB.isHidden = true
         selectedMB.isHidden = true
         selectedRB.isHidden = false
