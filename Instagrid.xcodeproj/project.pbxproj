@@ -78,7 +78,6 @@
 		824676CB231818EC00707819 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				829BC2092330B6BB00595E9B /* ImageButtonManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -94,6 +93,7 @@
 		824676CD2318191000707819 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				829BC2092330B6BB00595E9B /* ImageButtonManager.swift */,
 				824676DD231D66DF00707819 /* FrameChange.swift */,
 				824676DB231D64F900707819 /* ButtonsView.swift */,
 				824676B92318181700707819 /* Main.storyboard */,
