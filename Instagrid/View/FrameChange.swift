@@ -51,8 +51,8 @@ class FrameChange: UIView {
     
 //    creates the gestures
     private func swipeToShare() {
-        let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(OrientationToShare(_:)))
-        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(OrientationToShare(_:)))
+        let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(orientationToShare(_:)))
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(orientationToShare(_:)))
         
         swipeUp.direction = .up
         swipeLeft.direction = .left
@@ -61,12 +61,10 @@ class FrameChange: UIView {
         self.addGestureRecognizer(swipeLeft)
     }
 //    detects the orientation and performs either a swipe left animation or a swipe up animation
-    @objc private func OrientationToShare(_ sender: UISwipeGestureRecognizer) {
+    @objc private func orientationToShare(_ sender: UISwipeGestureRecognizer) {
         if UIDevice.current.orientation.isLandscape {
-            sender.direction = .left
             swipeAnimation(translationX: -self.frame.width, y: 0)
         } else {
-            sender.direction = .up
             swipeAnimation(translationX: 0, y: -self.frame.height)
         }
         let frameShare = Notification.Name(rawValue: "frameShar")
@@ -75,21 +73,22 @@ class FrameChange: UIView {
     }
 //    used to create the swipe animations above
     private func swipeAnimation(translationX x: CGFloat, y: CGFloat) {
-        UIView.animate(withDuration: 0.5, animations: {
+        UIView.animate(withDuration: 0.4, animations: {
             self.transform = CGAffineTransform(translationX: x, y: y)
         })
     }
 //    create an image of the frame swipped
     public func createImage(frame: FrameChange) -> UIImage? {
         UIGraphicsBeginImageContext(self.frame.size)
-        self.layer.render(in: UIGraphicsGetCurrentContext()!)
-        guard let image = UIGraphicsGetImageFromCurrentImageContext() else { return UIImage() }
-        return image
+        if  UIGraphicsGetCurrentContext() != nil {
+            self.layer.render(in: UIGraphicsGetCurrentContext()!)
+        } else {backInitialPlace()}
+        return UIGraphicsGetImageFromCurrentImageContext()
     }
     
 //    puts the swipped frame back to it's original place with an animation
     public func backInitialPlace() {
-        UIView.animate(withDuration: 0.5, animations: {
+        UIView.animate(withDuration: 0.4, animations: {
             self.transform = .identity
         }, completion: nil)
     }

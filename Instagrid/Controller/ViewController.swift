@@ -48,13 +48,17 @@ class ViewController: UIViewController,  UIImagePickerControllerDelegate, UINavi
 
 //    transforms the image picked into a UIImage and sets it into selectedImage and replaces the default view of the blue plus button that was pressed
     public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        let photo = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
-        
-        dismiss(animated: true, completion: nil)
-        
-        selectedImage.setImage(UIImage(named: ""), for: .normal)
-        selectedImage.setBackgroundImage(photo, for: .normal)
-        selectedImage.imageView!.contentMode = .scaleAspectFit
+        if info[UIImagePickerController.InfoKey.originalImage] != nil {
+            let photo = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+
+            dismiss(animated: true, completion: nil)
+            
+            selectedImage.setImage(UIImage(), for: .normal)
+            selectedImage.setBackgroundImage(photo, for: .normal)
+            selectedImage.imageView!.contentMode = .scaleAspectFit
+        } else {
+            self.frameIMG.backInitialPlace()
+        }
     }
 //    takes the image created by createImage(), allows you to share it and put the frame back to it's original place
     @objc private func frameShareFunc() {
@@ -65,7 +69,4 @@ class ViewController: UIViewController,  UIImagePickerControllerDelegate, UINavi
             activity, completed, item, error in self.frameIMG.backInitialPlace()
         }
     }
-    
-   
-    
 }
