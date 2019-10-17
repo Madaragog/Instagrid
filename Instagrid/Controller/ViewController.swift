@@ -37,7 +37,10 @@ class ViewController: UIViewController,  UIImagePickerControllerDelegate, UINavi
         let frameShare = Notification.Name(rawValue: "frameShar")
         NotificationCenter.default.addObserver(self, selector: #selector(frameShareFunc), name: frameShare, object: nil)
     }
-    
+// removes the observers
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: Notification.Name("frameShar"), object: nil)
+    }
 //    called when a button is tapped, assign the sender as selectedImage and manage the opening of the photo library
     @IBAction private func didTapButton(_ sender: ImageButtonManager) {
         selectedImage = sender

@@ -29,7 +29,12 @@ class FrameChange: UIView {
         
         swipeToShare()
     }
-    
+// removes the observers
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: Notification.Name(rawValue: "leftFrameChange"), object: nil)
+        NotificationCenter.default.removeObserver(self, name: Notification.Name(rawValue: "middleFrameChange"), object: nil)
+        NotificationCenter.default.removeObserver(self, name: Notification.Name(rawValue: "rightFrameChange"), object: nil)
+    }
 //    displays the frame associated to the buttons and hides the others
     @objc private func leftFrameIsSelected() {
         leftFrame.isHidden = false

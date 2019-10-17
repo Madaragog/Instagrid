@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,32 +18,32 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Instagrid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nj7-4F-CHS" userLabel="Frame Change" customClass="FrameChange" customModule="Instagrid" customModuleProvider="target">
-                                <rect key="frame" x="16" y="140" width="288" height="288"/>
+                                <rect key="frame" x="32" y="178" width="311" height="311"/>
                                 <subviews>
-                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MWA-Ia-i8t" userLabel="leftFrame">
-                                        <rect key="frame" x="8" y="8" width="272" height="272"/>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="MWA-Ia-i8t" userLabel="leftFrame">
+                                        <rect key="frame" x="16" y="16" width="279" height="279"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xG6-8I-25H" userLabel="Button1LF" customClass="ImageButtonManager" customModule="Instagrid" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="272" height="132"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="279" height="131.5"/>
                                                 <connections>
                                                     <action selector="didTapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W4m-xA-fcf"/>
                                                 </connections>
                                             </button>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7Y9-5q-FmQ">
-                                                <rect key="frame" x="0.0" y="140" width="272" height="132"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="7Y9-5q-FmQ">
+                                                <rect key="frame" x="0.0" y="147.5" width="279" height="131.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1G-Yy-KUq" userLabel="Button2LF" customClass="ImageButtonManager" customModule="Instagrid" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="132" height="132"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="131.5" height="131.5"/>
                                                         <connections>
                                                             <action selector="didTapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HsA-Pu-rjx"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igx-Cv-d2M" userLabel="Button3LF" customClass="ImageButtonManager" customModule="Instagrid" customModuleProvider="target">
-                                                        <rect key="frame" x="140" y="0.0" width="132" height="132"/>
+                                                        <rect key="frame" x="147.5" y="0.0" width="131.5" height="131.5"/>
                                                         <connections>
                                                             <action selector="didTapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bxi-BS-AVZ"/>
                                                         </connections>
@@ -54,20 +52,20 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xdh-up-c4d" userLabel="middleFrame">
-                                        <rect key="frame" x="8" y="8" width="272" height="272"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="xdh-up-c4d" userLabel="middleFrame">
+                                        <rect key="frame" x="16" y="16" width="279" height="279"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="51M-ET-ZXo">
-                                                <rect key="frame" x="0.0" y="0.0" width="272" height="132"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="51M-ET-ZXo">
+                                                <rect key="frame" x="0.0" y="0.0" width="279" height="131.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVH-SQ-oh4" userLabel="Button1MF" customClass="ImageButtonManager" customModule="Instagrid" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="132" height="132"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="131.5" height="131.5"/>
                                                         <connections>
                                                             <action selector="didTapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yte-CG-RBt"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sM-A8-Rpe" userLabel="Button2MF" customClass="ImageButtonManager" customModule="Instagrid" customModuleProvider="target">
-                                                        <rect key="frame" x="140" y="0.0" width="132" height="132"/>
+                                                        <rect key="frame" x="147.5" y="0.0" width="131.5" height="131.5"/>
                                                         <connections>
                                                             <action selector="didTapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0BX-Jc-nVi"/>
                                                         </connections>
@@ -75,44 +73,44 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mob-kH-JaH" userLabel="Button3MF" customClass="ImageButtonManager" customModule="Instagrid" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="140" width="272" height="132"/>
+                                                <rect key="frame" x="0.0" y="147.5" width="279" height="131.5"/>
                                                 <connections>
                                                     <action selector="didTapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vei-yU-QrR"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CXY-bL-v6Q" userLabel="rightFrame">
-                                        <rect key="frame" x="8" y="8" width="272" height="272"/>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="CXY-bL-v6Q" userLabel="rightFrame">
+                                        <rect key="frame" x="16" y="16" width="279" height="279"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="w4Z-0l-gt4">
-                                                <rect key="frame" x="0.0" y="0.0" width="272" height="132"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="w4Z-0l-gt4">
+                                                <rect key="frame" x="0.0" y="0.0" width="279" height="131.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJu-4F-eG2" userLabel="Button1RF" customClass="ImageButtonManager" customModule="Instagrid" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="132" height="132"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="131.5" height="131.5"/>
                                                         <connections>
                                                             <action selector="didTapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="04k-fQ-QNC"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9Q-47-yDG" userLabel="Button2RF" customClass="ImageButtonManager" customModule="Instagrid" customModuleProvider="target">
-                                                        <rect key="frame" x="140" y="0.0" width="132" height="132"/>
+                                                        <rect key="frame" x="147.5" y="0.0" width="131.5" height="131.5"/>
                                                         <connections>
                                                             <action selector="didTapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Srx-mM-11l"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Uzx-Qp-we6">
-                                                <rect key="frame" x="0.0" y="140" width="272" height="132"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Uzx-Qp-we6">
+                                                <rect key="frame" x="0.0" y="147.5" width="279" height="131.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="myb-aL-ZjJ" userLabel="Button3RF" customClass="ImageButtonManager" customModule="Instagrid" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="132" height="132"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="131.5" height="131.5"/>
                                                         <connections>
                                                             <action selector="didTapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p9Q-bg-YjT"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5RR-pv-6hD" userLabel="Button4RF" customClass="ImageButtonManager" customModule="Instagrid" customModuleProvider="target">
-                                                        <rect key="frame" x="140" y="0.0" width="132" height="132"/>
+                                                        <rect key="frame" x="147.5" y="0.0" width="131.5" height="131.5"/>
                                                         <connections>
                                                             <action selector="didTapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fys-51-7rL"/>
                                                         </connections>
@@ -124,19 +122,19 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.058429442349999999" green="0.40303593869999998" blue="0.59889394039999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="CXY-bL-v6Q" secondAttribute="bottom" constant="8" id="3M4-Xp-Ogu"/>
-                                    <constraint firstAttribute="trailing" secondItem="MWA-Ia-i8t" secondAttribute="trailing" constant="8" id="3Op-6z-qy3"/>
-                                    <constraint firstItem="CXY-bL-v6Q" firstAttribute="leading" secondItem="Nj7-4F-CHS" secondAttribute="leading" constant="8" id="9eg-6e-YrV"/>
-                                    <constraint firstAttribute="trailing" secondItem="CXY-bL-v6Q" secondAttribute="trailing" constant="8" id="EO1-0e-TUd"/>
-                                    <constraint firstAttribute="bottom" secondItem="MWA-Ia-i8t" secondAttribute="bottom" constant="8" id="Ic8-Yq-VMz"/>
-                                    <constraint firstItem="xdh-up-c4d" firstAttribute="top" secondItem="Nj7-4F-CHS" secondAttribute="top" constant="8" id="OL8-b3-Tr3"/>
-                                    <constraint firstItem="MWA-Ia-i8t" firstAttribute="top" secondItem="Nj7-4F-CHS" secondAttribute="top" constant="8" id="SI2-wk-TTH"/>
-                                    <constraint firstItem="MWA-Ia-i8t" firstAttribute="leading" secondItem="Nj7-4F-CHS" secondAttribute="leading" constant="8" id="bFU-jt-jU4"/>
-                                    <constraint firstItem="xdh-up-c4d" firstAttribute="leading" secondItem="Nj7-4F-CHS" secondAttribute="leading" constant="8" id="jFM-4G-Kcb"/>
+                                    <constraint firstAttribute="bottom" secondItem="CXY-bL-v6Q" secondAttribute="bottom" constant="16" id="3M4-Xp-Ogu"/>
+                                    <constraint firstAttribute="trailing" secondItem="MWA-Ia-i8t" secondAttribute="trailing" constant="16" id="3Op-6z-qy3"/>
+                                    <constraint firstItem="CXY-bL-v6Q" firstAttribute="leading" secondItem="Nj7-4F-CHS" secondAttribute="leading" constant="16" id="9eg-6e-YrV"/>
+                                    <constraint firstAttribute="trailing" secondItem="CXY-bL-v6Q" secondAttribute="trailing" constant="16" id="EO1-0e-TUd"/>
+                                    <constraint firstAttribute="bottom" secondItem="MWA-Ia-i8t" secondAttribute="bottom" constant="16" id="Ic8-Yq-VMz"/>
+                                    <constraint firstItem="xdh-up-c4d" firstAttribute="top" secondItem="Nj7-4F-CHS" secondAttribute="top" constant="16" id="OL8-b3-Tr3"/>
+                                    <constraint firstItem="MWA-Ia-i8t" firstAttribute="top" secondItem="Nj7-4F-CHS" secondAttribute="top" constant="16" id="SI2-wk-TTH"/>
+                                    <constraint firstItem="MWA-Ia-i8t" firstAttribute="leading" secondItem="Nj7-4F-CHS" secondAttribute="leading" constant="16" id="bFU-jt-jU4"/>
+                                    <constraint firstItem="xdh-up-c4d" firstAttribute="leading" secondItem="Nj7-4F-CHS" secondAttribute="leading" constant="16" id="jFM-4G-Kcb"/>
                                     <constraint firstAttribute="width" secondItem="Nj7-4F-CHS" secondAttribute="height" multiplier="1:1" id="kRI-rf-abZ"/>
-                                    <constraint firstItem="CXY-bL-v6Q" firstAttribute="top" secondItem="Nj7-4F-CHS" secondAttribute="top" constant="8" id="o5P-TP-pgq"/>
-                                    <constraint firstAttribute="trailing" secondItem="xdh-up-c4d" secondAttribute="trailing" constant="8" id="puA-KP-H11"/>
-                                    <constraint firstAttribute="bottom" secondItem="xdh-up-c4d" secondAttribute="bottom" constant="8" id="yS6-6S-gee"/>
+                                    <constraint firstItem="CXY-bL-v6Q" firstAttribute="top" secondItem="Nj7-4F-CHS" secondAttribute="top" constant="16" id="o5P-TP-pgq"/>
+                                    <constraint firstAttribute="trailing" secondItem="xdh-up-c4d" secondAttribute="trailing" constant="16" id="puA-KP-H11"/>
+                                    <constraint firstAttribute="bottom" secondItem="xdh-up-c4d" secondAttribute="bottom" constant="16" id="yS6-6S-gee"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="leftFrame" destination="MWA-Ia-i8t" id="FVZ-Ya-jCm"/>
@@ -145,27 +143,27 @@
                                 </connections>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Instagrid" translatesAutoresizingMaskIntoConstraints="NO" id="3Xk-c6-XKO" userLabel="Instagrid">
-                                <rect key="frame" x="97" y="30" width="126" height="39"/>
+                                <rect key="frame" x="124.5" y="10" width="126" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="SuL-T3-3lT"/>
                                     <constraint firstAttribute="width" constant="126" id="sje-R6-3cS"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lkY-t5-D5E" userLabel="Buttons" customClass="ButtonsView" customModule="Instagrid" customModuleProvider="target">
-                                <rect key="frame" x="16" y="457.5" width="288" height="90.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="lkY-t5-D5E" userLabel="Buttons" customClass="ButtonsView" customModule="Instagrid" customModuleProvider="target">
+                                <rect key="frame" x="40" y="557" width="295" height="85"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5nr-Sf-yRt" userLabel="ViewLB">
-                                        <rect key="frame" x="0.0" y="0.0" width="90.5" height="90.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIR-Gq-p1O" userLabel="leftButton">
-                                                <rect key="frame" x="0.0" y="0.0" width="90.5" height="90.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
                                                 <state key="normal" backgroundImage="Layout 1"/>
                                                 <connections>
                                                     <action selector="didTapLeftButton:" destination="lkY-t5-D5E" eventType="touchUpInside" id="bjC-RJ-faa"/>
                                                 </connections>
                                             </button>
                                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="qPN-Di-zHW" userLabel="selectedLB">
-                                                <rect key="frame" x="0.0" y="0.0" width="90.5" height="90.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="qPN-Di-zHW" secondAttribute="height" multiplier="1:1" id="HVS-Jw-UAs"/>
                                                 </constraints>
@@ -184,17 +182,17 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XHh-va-psc" userLabel="ViewMB">
-                                        <rect key="frame" x="98.5" y="0.0" width="91" height="90.5"/>
+                                        <rect key="frame" x="105" y="0.0" width="85" height="85"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b76-L6-NiK" userLabel="middleButton">
-                                                <rect key="frame" x="0.0" y="0.0" width="91" height="90.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
                                                 <state key="normal" backgroundImage="Layout 2"/>
                                                 <connections>
                                                     <action selector="didTapMiddleButton" destination="lkY-t5-D5E" eventType="touchUpInside" id="4Ry-va-WmM"/>
                                                 </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="Gfk-50-Qnf" userLabel="selectedMB">
-                                                <rect key="frame" x="0.0" y="0.0" width="91" height="90.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Gfk-50-Qnf" secondAttribute="height" multiplier="1:1" id="7X9-7h-I7i"/>
                                                 </constraints>
@@ -213,17 +211,17 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cTf-yK-ay7" userLabel="ViewRB">
-                                        <rect key="frame" x="197.5" y="0.0" width="90.5" height="90.5"/>
+                                        <rect key="frame" x="210" y="0.0" width="85" height="85"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RNy-fp-o7O" userLabel="rightButton">
-                                                <rect key="frame" x="0.0" y="0.0" width="90.5" height="90.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
                                                 <state key="normal" backgroundImage="Layout 3"/>
                                                 <connections>
                                                     <action selector="didTapRightButton" destination="lkY-t5-D5E" eventType="touchUpInside" id="Ern-I1-6ff"/>
                                                 </connections>
                                             </button>
                                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="KFc-eG-rVt" userLabel="selectedRB">
-                                                <rect key="frame" x="0.0" y="0.0" width="90.5" height="90.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="KFc-eG-rVt" secondAttribute="height" multiplier="1:1" id="pwb-aS-LfH"/>
                                                 </constraints>
@@ -250,7 +248,7 @@
                                 </connections>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAp-bv-oAt">
-                                <rect key="frame" x="92.5" y="107" width="135.5" height="25"/>
+                                <rect key="frame" x="120" y="145" width="135.5" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="YAp-bv-oAt" secondAttribute="height" multiplier="27:5" id="VeC-ZX-fDX"/>
                                     <constraint firstAttribute="width" secondItem="YAp-bv-oAt" secondAttribute="height" multiplier="45:8" id="psa-0A-60s"/>
@@ -271,7 +269,7 @@
                                 </variation>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow Up" translatesAutoresizingMaskIntoConstraints="NO" id="UgK-so-1yu">
-                                <rect key="frame" x="152.5" y="87" width="15" height="12"/>
+                                <rect key="frame" x="180" y="125" width="15" height="12"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="12" id="7Il-R1-Yy0"/>
                                     <constraint firstAttribute="height" constant="12" id="g9n-d5-mHa"/>
@@ -302,34 +300,34 @@
                             </constraint>
                             <constraint firstItem="UgK-so-1yu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="72" id="HlP-8p-sG9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Nj7-4F-CHS" secondAttribute="bottom" constant="10" id="JLD-N9-9b6">
-                                <variation key="heightClass=compact" constant="5"/>
+                                <variation key="heightClass=compact" constant="15"/>
                             </constraint>
                             <constraint firstItem="3Xk-c6-XKO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="NxW-HD-fcg"/>
-                            <constraint firstItem="Nj7-4F-CHS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="QR3-bC-Vef"/>
+                            <constraint firstItem="Nj7-4F-CHS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="QR3-bC-Vef"/>
                             <constraint firstItem="YAp-bv-oAt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="RFR-UW-uoK"/>
                             <constraint firstItem="UgK-so-1yu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="T3j-1O-qPH"/>
                             <constraint firstItem="YAp-bv-oAt" firstAttribute="top" secondItem="UgK-so-1yu" secondAttribute="bottom" constant="8" id="VS8-Qr-5Sh"/>
                             <constraint firstItem="UgK-so-1yu" firstAttribute="centerX" secondItem="YAp-bv-oAt" secondAttribute="centerX" id="Y8G-mF-Q4z"/>
-                            <constraint firstItem="lkY-t5-D5E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="c5f-so-cLv"/>
+                            <constraint firstItem="lkY-t5-D5E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="c5f-so-cLv"/>
                             <constraint firstItem="3Xk-c6-XKO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="erG-n8-jI0"/>
                             <constraint firstItem="Nj7-4F-CHS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fu1-3E-sGf"/>
                             <constraint firstItem="YAp-bv-oAt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jGP-cZ-7B0"/>
                             <constraint firstItem="UgK-so-1yu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kJ2-3k-w67"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lkY-t5-D5E" secondAttribute="trailing" constant="16" id="mBm-3Q-otA">
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lkY-t5-D5E" secondAttribute="trailing" constant="40" id="mBm-3Q-otA">
                                 <variation key="heightClass=compact" constant="30"/>
                             </constraint>
                             <constraint firstItem="YAp-bv-oAt" firstAttribute="top" secondItem="UgK-so-1yu" secondAttribute="bottom" constant="-6" id="nRl-qU-Zrx">
-                                <variation key="heightClass=compact" constant="0.0"/>
+                                <variation key="heightClass=compact" constant="10"/>
                             </constraint>
                             <constraint firstItem="YAp-bv-oAt" firstAttribute="centerY" secondItem="Nj7-4F-CHS" secondAttribute="centerY" id="ofH-ap-971"/>
                             <constraint firstItem="Nj7-4F-CHS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="rGT-CY-7SH">
                                 <variation key="heightClass=compact" constant="50"/>
                             </constraint>
                             <constraint firstItem="lkY-t5-D5E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="rsE-46-VIy"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Nj7-4F-CHS" secondAttribute="trailing" constant="16" id="wLU-1b-3Oa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Nj7-4F-CHS" secondAttribute="trailing" constant="32" id="wLU-1b-3Oa"/>
                             <constraint firstItem="Nj7-4F-CHS" firstAttribute="leading" secondItem="YAp-bv-oAt" secondAttribute="trailing" constant="47.5" id="wny-Il-15W"/>
-                            <constraint firstItem="lkY-t5-D5E" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-20" id="zEf-nL-rmy">
-                                <variation key="heightClass=compact" constant="-5"/>
+                            <constraint firstItem="lkY-t5-D5E" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-25" id="zEf-nL-rmy">
+                                <variation key="heightClass=compact" constant="-15"/>
                             </constraint>
                             <constraint firstItem="lkY-t5-D5E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zK4-ZR-262"/>
                         </constraints>
