@@ -1,3 +1,5 @@
+SCHOOL PROJECT
+
 # Instagrid
 
 Instagrid is an application that allows you to share frames filled with your photos.
